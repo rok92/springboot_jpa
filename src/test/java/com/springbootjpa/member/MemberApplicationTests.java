@@ -1,4 +1,4 @@
-package com.codingreceipe.member;
+package com.springbootjpa.member;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

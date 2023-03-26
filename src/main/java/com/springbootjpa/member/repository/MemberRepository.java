@@ -1,6 +1,6 @@
-package com.codingreceipe.member.repository;
+package com.springbootjpa.member.repository;
 
-import com.codingreceipe.member.entity.MemberEntity;
+import com.springbootjpa.member.entity.MemberEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

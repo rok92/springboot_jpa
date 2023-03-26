@@ -1,6 +1,6 @@
-package com.codingreceipe.member.dto;
+package com.springbootjpa.member.dto;
 
-import com.codingreceipe.member.entity.MemberEntity;
+import com.springbootjpa.member.entity.MemberEntity;
 import lombok.*;
 
 @Getter

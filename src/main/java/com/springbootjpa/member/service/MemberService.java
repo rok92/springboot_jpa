@@ -1,12 +1,11 @@
-package com.codingreceipe.member.service;
+package com.springbootjpa.member.service;
 
-import com.codingreceipe.member.dto.MemberDTO;
-import com.codingreceipe.member.entity.MemberEntity;
-import com.codingreceipe.member.repository.MemberRepository;
+import com.springbootjpa.member.dto.MemberDTO;
+import com.springbootjpa.member.entity.MemberEntity;
+import com.springbootjpa.member.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.lang.reflect.Member;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -85,5 +84,16 @@ public class MemberService {
 
     public void deleteById(Long id) {
         memberRepository.deleteById(id);
+    }
+
+    public String emailCheck(String memberEmail) {
+        Optional<MemberEntity> byMemberEmail = memberRepository.findByMemberEmail(memberEmail);
+        if(byMemberEmail.isPresent()){
+            // 조회결과가 있으면 사용할 수 x
+            return null;
+        }else{
+            // 조회결과가 없으면 사용할 수 o
+            return "사용가능한 이메일 입니다";
+        }
     }
 }

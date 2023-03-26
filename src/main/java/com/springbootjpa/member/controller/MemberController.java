@@ -1,7 +1,7 @@
-package com.codingreceipe.member.controller;
+package com.springbootjpa.member.controller;
 
-import com.codingreceipe.member.dto.MemberDTO;
-import com.codingreceipe.member.service.MemberService;
+import com.springbootjpa.member.dto.MemberDTO;
+import com.springbootjpa.member.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -92,5 +92,17 @@ public class MemberController {
     public String logout(HttpSession session){
         session.invalidate();
         return "index";
+    }
+
+    // 이메일체크
+    @PostMapping("/member/email-check")
+    public @ResponseBody String emailCheck(@RequestParam("memberEmail") String memberEmail){
+        System.out.println("memberEmail = " + memberEmail);
+        String checkResult = memberService.emailCheck(memberEmail);
+        if(checkResult != null){
+            return "ok";
+        }else{
+            return "no";
+        }
     }
 }

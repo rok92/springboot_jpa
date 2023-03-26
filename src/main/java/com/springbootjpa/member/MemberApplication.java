@@ -1,4 +1,4 @@
-package com.codingreceipe.member;
+package com.springbootjpa.member;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
