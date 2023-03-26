@@ -21,4 +21,5 @@
 - RESTApi 구조를 이용하여 구현
 - application.yml
 - Getmapping, Postmapping 으로 구현 주소값 전달받고, ModelAttribute와 Pathvariable로 인자 전달 후 Thymleaf 문법을 활용하여 화면에 구현
+- ajax 비동기 처리를 통해 중복가입 방지기능 추가
 
